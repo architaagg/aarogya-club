@@ -6,6 +6,7 @@ import aarogyahindi from "../assets/aarogyahindi.png";
 import flower from '../assets/flower.svg';
 import cover from '../assets/cover.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -32,7 +33,7 @@ const Hero = () => {
 
     return (
         <div
-        id='home'
+            id='home'
             className="flex flex-col bg-white items-center font-Basic relative pt-36 pb-10 px-4 md:px-6 lg:px-8"
             onMouseMove={handleMouseMove}
         >
@@ -124,14 +125,31 @@ const Hero = () => {
                     alt="Decorative flower"
                 />
                 {/* Button */}
-                <motion.div
-                    className='mt-2 md:mt-3 relative z-40'
-                    initial={AnimationProps.initial}
-                    animate={AnimationProps.animate}
-                    transition={AnimationProps.transition}
-                >
-                    <Button buttonColor="#406ED5" textColor="white" buttonText="JOIN US" redirect="https://linktr.ee/aarogya_nitj" />
-                </motion.div>
+                <Link to="/quiz">
+                    <motion.div
+                        className='mt-2 md:mt-3 relative z-40'
+                        initial={AnimationProps.initial}
+                        animate={AnimationProps.animate}
+                        transition={AnimationProps.transition}
+                    >
+
+                        <Button buttonColor="#406ED5" textColor="white" buttonText="Quiz-6" />
+
+                    </motion.div>
+                </Link>
+
+                <Link to="/bloodbank">
+                    <motion.div
+                        className='mt-2 md:mt-3 relative z-40'
+                        initial={AnimationProps.initial}
+                        animate={AnimationProps.animate}
+                        transition={{ ...AnimationProps.transition, delay: 2.0 }}
+                    >
+
+                        <Button buttonColor="#406ED5" textColor="white" buttonText="Blood Bank" />
+
+                    </motion.div>
+                </Link>
             </motion.div>
 
             {/* Marquee */}

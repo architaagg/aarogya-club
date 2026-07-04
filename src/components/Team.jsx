@@ -55,15 +55,9 @@ const teamData = [
   },
   {
     id: 24,
-    name: "Sumit",
+    name: "Pradeep Awasthi",
     position: "Outreach Team",
-    profilePic: "sumit.jpg",
-  },
-  {
-    id: 25,
-    name: "Aditi Singh",
-    position: "Outreach Team",
-    profilePic: "ADITISINGH.jpg",
+    profilePic: "pradeep.jpg",
   },
   {
     id: 18,
@@ -102,12 +96,6 @@ const teamData = [
     name: "Archita",
     position: "Technical Team",
     profilePic: "architaaggarwal-min.jpg",
-  },
-  {
-    id: 34,
-    name: "Anurag",
-    position: "Technical Team",
-    profilePic: "anurag.jpg", // Changed from duplicate image
   },
   {
     id: 9,
@@ -199,9 +187,9 @@ const teamData = [
   },
   {
     id: 23,
-    name: "Bhagat Singh",
+    name: "Ayush Gupta",
     position: "Social Media Team",
-    profilePic: "bhagatsingh-min.jpg",
+    profilePic: "ayushgupta.jpeg",
   },
 ];
 

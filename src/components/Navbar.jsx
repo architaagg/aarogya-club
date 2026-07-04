@@ -11,11 +11,7 @@ import {Link, NavLink} from 'react-router-dom'
 
 const Navbar = () => {
     const [open, setopen] = useState(false)
-    const [isOpen, setIsOpen] = useState(false);
 
-    function navbartoogle() {
-        setopen(!open)
-    }
 
     return (
         <>
@@ -34,16 +30,23 @@ const Navbar = () => {
                 <li className='cursor-pointer hover:text-blue-700'><a href='#events'>Events</a></li> */}
                 <li className='cursor-pointer hover:text-blue-700'><Link to='/team'>Teams</Link></li>
                 <li className='cursor-pointer hover:text-blue-700'><Link to='/gallery'>Gallery</Link></li>
+                {/* <li className='cursor-pointer hover:text-blue-700'><Link to='/bloodbank'>Blood Bank</Link></li> */}
+                <li className='cursor-pointer hover:text-blue-700'><Link to='/quiz'>Quiz</Link></li>
+                <li className='cursor-pointer hover:text-blue-700'><Link to='/bloodbank'>Blood Bank</Link></li>
                 {/* <li className='cursor-pointer hover:text-blue-700'>Contact Us</li> */}
             </ul>
             <div className='flex gap-4 items-center'>
-                <Button buttonColor="#40916c" textColor="white" buttonText="JOIN GROUP" redirect="https://chat.whatsapp.com/L8Rt3ZXVCXAFBIfJu0rp7h" />
+                <Button buttonColor="#40916c" textColor="white" buttonText="JOIN US" redirect="https://linktr.ee/aarogya_nitj" />
                  <div className='sm:hidden block'>
-                    <GiHamburgerMenu onClick={navbartoogle} size="2em" />
+                    <GiHamburgerMenu 
+                        onClick={() => setopen(!open)} 
+                        size="2em" 
+                        className="cursor-pointer" 
+                    />
                 </div> 
             </div>
         </motion.div>
-        <ResponsiveNavbar open={open} setOpen={setIsOpen}/>
+        <ResponsiveNavbar open={open} setOpen={setopen}/>
         </>
     )
 }
